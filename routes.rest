@@ -1,0 +1,6 @@
+GET https://project1-co7z.onrender.com/users
+
+
+GET https://project1-co7z.onrender.com/users/67d4792bc360e860b282ccf8
+
+
