@@ -1,6 +1,27 @@
-GET https://project1-co7z.onrender.com/users
 
 
-GET https://project1-co7z.onrender.com/users/67d4792bc360e860b282ccf8
 
 
+
+# GET http://localhost:3000/users
+
+# GET http://localhost:3000/users/67d4792bc360e860b282ccf8
+
+POST http://localhost:3000/users HTTP/1.1
+
+{
+  "firstName":"Ash",
+  "lastName":"Vigo",
+  "email":"test@example.com",
+  "favoriteColor":"violeta"
+}
+
+
+PUT http://localhost:3000/users/67d4792bc360e860b282ccf8 HTTP/1.1
+      
+{
+  "firstName": "Jose",
+  "lastName": "Vigo",
+  "email": "test@example.com",
+  "favoriteColor": "rojo"
+}
