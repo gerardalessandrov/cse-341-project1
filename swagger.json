@@ -7,7 +7,7 @@
   },
   "host": "https://project1-co7z.onrender.com",
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["https", "http"],
   "paths": {
     "/": {
       "get": {

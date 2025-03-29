@@ -3,6 +3,9 @@ const mongodb = require('./data/database');
 
 const app = express();
 const port = process.env.PORT || 3001;
+const cors = require('cors');
+app.use(cors()); // Esto habilita CORS para todas las rutas
+
 app.use('/', require('./routes'));
 
 const bodyParser = require('body-parser');
