@@ -7,7 +7,7 @@
   },
   "host": "https://project1-co7z.onrender.com",
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
@@ -19,18 +19,9 @@
         }
       }
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/users/": {
       "get": {
+        "tags": ["Users"],
         "description": "",
         "produces": ["application/json"],
         "responses": {
