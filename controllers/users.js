@@ -17,7 +17,7 @@ const getSingle = async (req, res) => {
     res.status(200).json(users[0]);
   });
 };
-const createUser = async (req, res) => {
+const createUser = async (req,res) => {
   const user = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -25,10 +25,10 @@ const createUser = async (req, res) => {
     favoriteColor: req.body.favoriteColor
   };
   const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
-  if (response.acknowledged) {
-    res.status(201).send();
+  if (response) {
+    res.status(201).send(); // Usuario creado correctamente
   } else {
-    res.status(500).json(response.error || 'Error al actualizar el usuario');
+    res.status(500).json(response.error || 'Some error occurred while creating the user');
   }
 };
 
@@ -46,9 +46,9 @@ const updateUser = async (req, res) => {
     .collection('users')
     .replaceOne({ _id: userId }, user);
   if (response.modifiedCount > 0) {
-    res.status(204).send('');
+    res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error al actualizar el usuario');
+    res.status(500).json(response.error || 'Some error ocurred while updating the user');
   }
 };
 const deleteUser = async (req, res) => {
