@@ -5,9 +5,9 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3001",
+  "host": "https://project1-co7z.onrender.com",
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
@@ -22,138 +22,137 @@
     "/users/": {
       "get": {
         "tags": ["Users"],
-         "description":"",
-         "produces":["application/json"]
+        "description": "",
+        "produces": ["application/json"]
+      },
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    }
+  },
+  "/users/": {
+    "get": {
+      "description": "",
+      "produces": ["application/json"],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    },
+    "post": {
+      "description": "",
+      "parameters": [
+        {
+          "name": "body",
+          "in": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "example": "any"
+              },
+              "lastName": {
+                "example": "any"
+              },
+              "email": {
+                "example": "any"
+              },
+              "favoriteColor": {
+                "example": "any"
+              }
+            }
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "Created"
         },
-        "responses":{
-          "200":{
-            "description":"OK"
-          }
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+  "/users/{id}": {
+    "get": {
+      "description": "",
+      "produces": ["application/json"],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
         }
       }
     },
-    "/users/": {
-      "get": {
-        "description": "",
-        "produces": ["application/json"],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                }
+    "put": {
+      "description": "",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "body",
+          "in": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "example": "any"
+              },
+              "lastName": {
+                "example": "any"
+              },
+              "email": {
+                "example": "any"
+              },
+              "favoriteColor": {
+                "example": "any"
               }
             }
           }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+        }
+      ],
+      "responses": {
+        "204": {
+          "description": "No Content"
+        },
+        "500": {
+          "description": "Internal Server Error"
         }
       }
     },
-    "/users/{id}": {
-      "get": {
-        "description": "",
-        "produces": ["application/json"],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
+    "delete": {
+      "description": "",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
         }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+      ],
+      "responses": {
+        "204": {
+          "description": "No Content"
+        },
+        "500": {
+          "description": "Internal Server Error"
         }
       }
     }
   }
-
+}
