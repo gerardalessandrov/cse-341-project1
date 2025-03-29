@@ -17,7 +17,7 @@ const getSingle = async (req, res) => {
     res.status(200).json(users[0]);
   });
 };
-const createUser = async (req,res) => {
+const createUser = async (req, res) => {
   const user = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
