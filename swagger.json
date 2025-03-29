@@ -5,9 +5,9 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "https://project1-co7z.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": ["https", "http"],
+  "schemes": ["http", "https"],
   "paths": {
     "/": {
       "get": {
@@ -19,9 +19,18 @@
         }
       }
     },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
-        "tags": ["Users"],
         "description": "",
         "produces": ["application/json"],
         "responses": {
