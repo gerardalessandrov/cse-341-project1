@@ -3,37 +3,40 @@
 
 
 
-# 
+GET http://localhost:3000/users
 
-# GET http://localhost:3000/users
 
-# GET http://localhost:3000/users/67d4792bc360e860b282ccf8
+# GET http://localhost:3000/users/67d465f9c360e860b282ccf6
 
-POST http://localhost:3000/users  HTTP/1.1 
+POST http://localhost:3000/users HTTP/1.1
 
- {
-   "firstName":"Ash",
-  "lastName":"Vigo",
-   "email":"test@example.com",
-   "favoriteColor":"violeta",
+content-type: application/json
+{
+   "firstName": "Ash",
+   "lastName": "Vigo",
+   "email": "test@example.com",
+   "favoriteColor": "violeta"
 }
 
 
 
-# PUT http://localhost:3000/users/67d4792bc360e860b282ccf8 HTTP/1.1
-      
-# {
-#   "firstName": "Jose",
-#   "lastName": "Vigo",
-#   "email": "test@example.com",
-#   "favoriteColor": "rojo"
-# }
 
-DELETE http://localhost:3000/users/67e76941aaf54a43f8280960 HTTP/1.1    
+PUT http://localhost:3000/users/67d465f9c360e860b282ccf6 HTTP/1.1
+
+content-type:application/json
+
+{
+   "firstName":"Jose",
+   "lastName":"Vigo",
+   "email":"test@example.com",
+   "favoriteColor":"rojo"
+}
+
+DELETE http://localhost:3000/users/67e767d1aaf54a43f828095b HTTP/1.1    
 
 {
     "firstName": null,
     "lastName": null,
     "email": null,
     "favoriteColor": null
-    }
+}
