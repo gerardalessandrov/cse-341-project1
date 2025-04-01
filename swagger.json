@@ -5,9 +5,9 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "project1-co7z.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": ["https", "http"],
   "paths": {
     "/": {
       "get": {
@@ -21,7 +21,6 @@
     },
     "/users/": {
       "get": {
-        "tags": ["Users"],
         "description": "",
         "produces": ["application/json"],
         "responses": {
@@ -49,6 +48,9 @@
                   "example": "any"
                 },
                 "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -108,6 +110,9 @@
                   "example": "any"
                 },
                 "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
                   "example": "any"
                 }
               }

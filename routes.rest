@@ -1,42 +1,47 @@
 
 
 
-
-
 GET http://localhost:3000/users
 
 
-# GET http://localhost:3000/users/67d465f9c360e860b282ccf6
 
-POST http://localhost:3000/users HTTP/1.1
+# # GET http://localhost:3000/users/67d465f9c360e860b282ccf6
 
-content-type: application/json
-{
-   "firstName": "Ash",
-   "lastName": "Vigo",
-   "email": "test@example.com",
-   "favoriteColor": "violeta"
-}
+# POST http://localhost:3000/users HTTP/1.1
+
+# content-type: application/json
+# {
+#     "firstName": "Ash",
+#    "lastName": "Vigo",
+#     "email": "test@example.com",
+#     "favoriteColor": "violeta",
+#     "birthday": "September 26",
+        
+#  }
 
 
 
 
-PUT http://localhost:3000/users/67d465f9c360e860b282ccf6 HTTP/1.1
+# PUT http://localhost:3000/users/67d465f9c360e860b282ccf6 HTTP/1.1
 
-content-type:application/json
+# content-type:application/json
 
-{
-   "firstName":"Jose",
-   "lastName":"Vigo",
-   "email":"test@example.com",
-   "favoriteColor":"rojo"
-}
+# {
+#     "firstName": "Ash",
+#    "lastName": "Vigo",
+#     "email": "test@example.com",
+#     "favoriteColor": "violeta",
+#     "birthday": "September 26",
+     
+# }
 
-DELETE http://localhost:3000/users/67e767d1aaf54a43f828095b HTTP/1.1    
+DELETE http://localhost:3000/users/67e75d2baaf54a43f8280950 HTTP/1.1    
 
 {
     "firstName": null,
     "lastName": null,
     "email": null,
-    "favoriteColor": null
+    "favoriteColor": null,
+    "birthday": null
+
 }
