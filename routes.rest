@@ -5,7 +5,7 @@ GET http://localhost:3000/users
 
 
 
-# # GET http://localhost:3000/users/67d465f9c360e860b282ccf6
+# GET http://localhost:3000/users/67d465f9c360e860b282ccf6
 
 # POST http://localhost:3000/users HTTP/1.1
 
@@ -35,7 +35,7 @@ GET http://localhost:3000/users
      
 # }
 
-DELETE http://localhost:3000/users/67e75d2baaf54a43f8280950 HTTP/1.1    
+DELETE http://localhost:3000/users/67ed7386b9c6b1f24a2d5573 HTTP/1.1    
 
 {
     "firstName": null,
